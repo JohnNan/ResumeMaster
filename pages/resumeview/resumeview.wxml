@@ -1,0 +1,179 @@
+
+<!--pages/resumeview/resumeview.wxml-->
+<view class="resume-wrap">
+  <view class="photo-name">
+    <image class="photo" src="{{mugshot}}"></image>
+    <view class="name">{{resume.userInfo.name}}</view>
+    <view class="pdf" bindtap="readPdf" data-url="https://resume.dreawer.com/resource/pdf/{{resume.pdf}}" 
+    style="display:{{isMe?'':'none'}}">PDF</view>
+  </view>
+  <view class="edit-list">
+    <view class="edit-item-bdr">
+      <view class="edit-item">
+        <view class="edit-content" catchtap="goInformation" data-ele="name">
+          <view class="title">姓名</view>
+          <view class="inner">{{resume.userInfo.name}}</view>
+        </view>
+      </view>
+      <view class="edit-item">
+        <view class="edit-content" catchtap="goInformation" data-ele="phoneNumber">
+          <view class="title">手机号</view>
+          <view class="inner">{{resume.userInfo.phoneNumber}}</view>
+        </view>
+      </view>
+      <view class="edit-item " style="display:{{resume.userInfo.gender?'':'none'}}" style="display:{{isMe?'':'none'}}">
+        <view class="edit-content" catchtap="goInformation" data-ele="gender">
+          <view class="title">性别</view>
+          <view class="inner">{{resume.userInfo.gender}}</view>
+        </view>
+      </view>
+      <view class="edit-item" style="display:{{resume.userInfo.birthday?'':'none'}}" style="display:{{isMe?'':'none'}}">
+        <view class="edit-content nobdr" catchtap="goInformation" data-ele="birthday">
+          <view class="title">生日</view>
+          <view class="inner">{{resume.userInfo.birthday}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="edit-item-bdr">
+      <view class="edit-item " style="display:{{resume.userInfo.position?'':'none'}}" style="display:{{isMe?'':'none'}}">
+        <view class="edit-content" catchtap="goInformation" data-ele="position">
+          <view class="title">求职意向</view>
+          <view class="inner">{{resume.userInfo.position}}</view>
+        </view>
+      </view>
+      <view class="edit-item " style="display:{{resume.userInfo.skill?'':'none'}}" style="display:{{isMe?'':'none'}}">
+        <view class="edit-content nobdr" catchtap="goInformation" data-ele="skill">
+          <view class="title">专业技能</view>
+          <view class="inner">{{resume.userInfo.skill}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="edit-item-bdr" catchtap="goInformation">
+      <view class="edit-item" style="display:{{resume.userInfo.email?'':'none'}}" style="display:{{isMe?'':'none'}}">
+        <view class="edit-content" catchtap="goInformation" data-ele="email">
+          <view class="title">邮箱</view>
+          <view class="inner">{{resume.userInfo.email}}</view>
+        </view>
+      </view>
+      <view class="edit-item " style="display:{{resume.userInfo.address?'':'none'}}" style="display:{{isMe?'':'none'}}">
+        <view class="edit-content nobdr" catchtap="goInformation" data-ele="address">
+          <view class="title">所在地</view>
+          <view class="inner">{{resume.userInfo.address}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="edit-item-bdr" catchtap="goInformation">
+      <view class="edit-item " style="display:{{resume.userInfo.hobby?'':'none'}}" style="display:{{isMe?'':'none'}}">
+        <view class="edit-content" catchtap="goInformation" data-ele="hobby">
+          <view class="title">兴趣爱好</view>
+          <view class="inner">{{resume.userInfo.hobby}}</view>
+        </view>
+      </view>
+      <view class="edit-item detail" catchtap="goInformation" data-ele="evaluate" style="display:{{resume.userInfo.evaluate?'':'none'}}" style="display:{{isMe?'':'none'}}">
+        <view class="edit-content nobdr">
+          <view class="title">自我评价</view>
+        </view>
+        <view class="edit-content nobdr">
+          <view class="inner">{{resume.userInfo.evaluate}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="edit-item-bdr" wx:for="{{resume.educations}}" wx:key="{{index}}">
+      <view class="edit-item" style="{{index==0?'':'display:none'}}" >
+        <view class="edit-content ef6">
+          <view class="title">教育背景</view>
+        </view>
+      </view>
+      <view class="edit-item" catchtap="goEducation" data-ele="school">
+        <view class="edit-content">
+          <view class="title">学校</view>
+          <view class="inner">{{item.school}}</view>
+        </view>
+      </view>
+      <view class="edit-item" catchtap="goEducation" data-ele="specialty">
+        <view class="edit-content">
+          <view class="title">专业</view>
+          <view class="inner">{{item.specialty}}</view>
+        </view>
+      </view>
+      <view class="edit-item" catchtap="goEducation" data-ele="education">
+        <view class="edit-content">
+          <view class="title">学历</view>
+          <view class="inner">{{item.education}}</view>
+        </view>
+      </view>
+      <view class="edit-item" catchtap="goEducation">
+        <view class="edit-content nobdr">
+          <view class="title">时间</view>
+          <view class="inner">{{item.time}}</view>
+        </view>
+      </view>
+    </view>
+    <view>
+      <view class="edit-item-bdr" style="display:{{resume.works.length==0?'none':''}}">
+        <view class="edit-item">
+          <view class="edit-content ef6">
+            <view class="title">工作经历</view>
+          </view>
+        </view>
+        <view class="edit-item" catchtap="goJob">
+          <view class="edit-content nobdr">
+            <view class="title">工作年限</view>
+            <view class="inner">{{resume.userInfo.workYear}}</view>
+          </view>
+        </view>
+      </view>
+      <view class="edit-item-bdr" catchtap="goJob" wx:for="{{resume.works}}" wx:key="{{index}}">
+        <view class="edit-item ">
+          <view class="edit-content" data-ele="company" catchtap="goJob" style="display:{{item.company?'':'none'}}">
+            <view class="title">公司</view>
+            <view class="inner">{{item.company}}</view>
+          </view>
+        </view>
+        <view class="edit-item " data-ele="position" catchtap="goJob" style="display:{{item.position?'':'none'}}">
+          <view class="edit-content">
+            <view class="title">职位</view>
+            <view class="inner">{{item.position}}</view>
+          </view>
+        </view>
+        <view class="edit-item" style="display:{{item.time?'':'none'}}">
+          <view class="edit-content">
+            <view class="title">时间</view>
+            <view class="inner">{{item.time}}</view>
+          </view>
+        </view>
+        <view class="edit-item detail" data-ele="description" catchtap="goJob" style="display:{{item.description?'':'none'}}">
+          <view class="edit-content nobdr">
+            <view class="title">项目/工作概述</view>
+          </view>
+          <view class="edit-content">
+            <view class="inner">{{item.description}}</view>
+          </view>
+        </view>
+      </view>
+
+      <!--添加教育经历-->
+      <view class="edit-item-bdr add" style="display:{{resume.educations.length==0?'':'none'}}">
+        <view class="edit-item">
+          <view class="edit-content nobdr">
+            <view class="title">添加</view>
+            <navigator class="more" url="/pages/education/education?resumeId={{resumeId}}">教育经历</navigator>
+          </view>
+        </view>
+      </view>
+
+      <!--添加工作经历-->
+      <view class="edit-item-bdr add" style="display:{{resume.works.length==0?'':'none'}}">
+        <view class="edit-item">
+          <view class="edit-content nobdr">
+            <view class="title">添加</view>
+            <navigator class="more" url="/pages/job/job?resumeId={{resumeId}}">工作经历</navigator>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="btn-wrap" style="display:{{isMe?'':'none'}}">
+    <button bindtap="postEmail" data-id="{{resume.id}}">投递</button>
+  </view>
+</view>

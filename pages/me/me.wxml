@@ -1,0 +1,97 @@
+
+<!--pages/me/me.wxml-->
+
+<!--page-->
+<view class="tabbar">
+  <view class="nav" catchtap="goIndex">简历库</view>
+  <view class="nav current">我的</view>
+</view>
+<view class="me">
+  <view class="card person" bindtap="goResumView" style="display:{{resume?'':'none'}}" data-rid="{{resume.id}}">
+    <view class="card-left">
+      <view class="mugshot">
+        <image src="{{user.mugshot}}" mode="widthFix"></image>
+      </view>
+      <view class="name">
+        <text>{{resume.userInfo.name}}</text>
+        <view class="icon {{user.gender==1?'icon-male':'icon-female'}}"></view>
+      </view>
+    </view>
+    <view class="card-right">
+      <view class="view-p">
+        <view class="view-span">学历</view>{{resume.educations[0].education||''}}</view>
+      <view class="view-p">
+        <view class="view-span">求职意向</view>{{resume.userInfo.position||''}}</view>
+      <view class="view-p">
+        <view class="view-span">工作年限</view>{{resume.userInfo.workYear||''}}</view>
+      <view class="view-p">
+        <view class="view-span">专业技能</view>
+        <view class="overflow">
+          {{resume.userInfo.skill||''}}
+        </view>
+
+        <!--<view class="inaline"></view>-->
+      </view>
+    </view>
+    <view class="dot" catchtap="defaultResume" data-id="{{resume.id}}"></view>
+    
+  </view>
+  <view class="card myresume" style="display:{{myResumes.length==0?'none':''}}">
+    <view class="title">
+      <view class="icon"></view>我的简历</view>
+    <view class="card-cntt" wx:for="{{myResumes}}" wx:key="{{index}}" catchtap='goResumView' data-rid="{{item.id}}">
+      <view class="mytemplate">
+        <image src="https://resume.dreawer.com{{item.photo}}" mode="aspectFill"></image>
+        <view class="view-p">{{item.name}}
+
+          <!--<view class="view-span">未完善</view>-->
+        </view>
+        <view class="view-p time">{{item.createTime}}</view>
+        <view class="arrow" catchtap="showActionSheet" data-item="{{item}}"></view>
+      </view>
+    </view>
+  </view>
+  <!--<view class="card myresume" style="display:{{myFavoriteResumes.length==0?'none':''}}">
+    <view class="title">
+      <view class="icon favorite"></view>我的收藏</view>
+    <view class="card-cntt" bindtap="navigateToIndex" wx:for="{{myFavoriteResumes}}" wx:key="{{index}}" data-rid="{{item.id}}">
+      <view class="mytemplate">
+        <image src="{{item.photo}}" mode="widthFix"></image>
+        <view class="view-p">{{item.name}}</view>
+        <view class="view-p time">{{item.createTime}}</view>
+      </view>
+    </view>
+  </view>-->
+</view>
+
+<!--android mask-->
+
+<!--<view class="mask">
+    <view class="member-list">
+        <view class="member-tit">参与人员名单</view>
+        <view class="flexbox">
+            <view class="flexitem">戴炜</view>
+            <view class="flexitem">李伟</view>
+            <view class="flexitem">王小朋</view>
+            <view class="flexitem">丁凯</view>
+            <view class="flexitem">南慈航</view>
+            <view class="flexitem">彭杰</view>
+        </view>
+        <view class="flexbox">
+            <view class="flexitem">刘智明</view>
+            <view class="flexitem">严强</view>
+            <view class="flexitem">李佳欢</view>
+            <view class="flexitem">杨明</view>
+            <view class="flexitem">董佳俊</view>
+            <view class="flexitem">张泉</view>
+        </view>
+        <view class="flexbox">
+            <view class="flexitem">王静</view>
+            <view class="flexitem">池焕</view>
+            <view class="flexitem">张慧</view>
+            <view class="flexitem">李梦倩</view>
+            <view class="flexitem"></view>
+            <view class="flexitem"></view>
+        </view>
+    </view>
+</view>-->

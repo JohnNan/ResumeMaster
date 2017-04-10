@@ -1,0 +1,103 @@
+/* pages/information/information.wxss */
+.information,.job,.education{
+    padding-top: 40rpx;
+}
+.edit-item-bdr{
+    margin-bottom:40rpx;
+}
+.edit-list{
+    line-height: 1;
+}
+.edit-item{
+    padding:0 40rpx;
+    background-color: #fff;
+    font-size:30rpx;
+    color: #333;
+}
+.edit-content{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border-bottom:1px solid #d9d9d9;
+    display: flex;
+    flex-wrap:nowrap;
+    justify-content: space-between;
+    align-content: stretch;
+    background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAXCAMAAADneDWzAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAASFBMVEUAAADZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dkAAAAG/MvkAAAAFnRSTlMAHncGhr4L1dIKEvWNB8XgEc4JhCWJmTgJxAAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAA1SURBVBjTY2BkYmZAABYxViQuG/uAcTk4EVwubjEeOIeXT4xfAIkjKEQHDoMwModBRBSJAwDK8AVjAUGqFQAAAABJRU5ErkJggg==) no-repeat right center;
+    background-size: 18rpx auto;
+}
+.nobg{
+    background: none;
+}
+.title{
+    font-size: 30rpx;
+    line-height: 90rpx;
+    color: #333;
+    /*display: flex;
+    flex-direction: row;
+    align-items: center;*/
+}
+.title text{
+    display: inline-block;
+    line-height: 90rpx;
+    color: #ef6461;
+    font-size: 28rpx;
+}
+.edit-content .inner,
+.edit-content input,
+.edit-content picker,
+.edit-content navigator,
+.edit-content .more{
+    flex: 1;
+    height:90rpx;
+    padding-right: 42rpx;
+    text-align: right;
+    font-size:30rpx;
+    line-height: 90rpx;
+    color: #999;
+    overflow:hidden;
+}
+.edit-content textarea{
+    width: 100%;
+}
+.btn-wrap .btn{
+    position: static;
+    margin: 0 auto;
+}
+.nobdr{border-bottom:0;}
+.detail .edit-content,
+.add .edit-content{background: none;}
+.passContainer {
+    height: 100rpx;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+}
+.passItem {
+    width: 22%;
+    height: 100%;
+    float: left;
+    margin-right: 4%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    text-align: center;
+    line-height: 100rpx;
+    font-size:30px;
+}
+.passItem:last-child {
+    margin:0;
+}
+
+.sms{
+    height:100%;
+    width:100%;
+    background-color: transparent;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 40px;
+    font-family: "courier new", sans-serif;
+    position:absolute;
+}
+.hide{
+    display: none;
+}

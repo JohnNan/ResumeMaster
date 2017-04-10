@@ -1,0 +1,65 @@
+/* pages/resumeview/resumeview.wxss */
+@import "/pages/information/information.wxss" ;
+@import "/pages/job/job.wxss" ;
+@import "/pages/education/education.wxss" ;
+
+.resume-wrap{
+    padding-bottom: 90rpx;
+}
+.photo-name{
+    box-sizing: border-box;
+    -wbekit-box-sizing: border-box;
+    width:100%;
+    background-color: #ef6461;
+    text-align: center;
+    padding: 40rpx 0;
+    position: relative;
+}
+.photo-name .photo{
+    display: inline-block;
+    width: 140rpx;
+    height: 140rpx;
+    border-radius: 50%;
+    margin-bottom: 22rpx;
+}
+.photo-name .name{
+    font-size: 28rpx;
+    color: #fff;
+    line-height: 1;
+}
+.pdf{
+    width:80rpx;
+    height: 80rpx;
+    font-size: 26rpx;
+    line-height: 80rpx;
+    color: #fff;
+    text-align: center;
+    font-weight: bolder;
+    background-color:rgba(255,255,255,0.25);
+    border-radius: 50%;
+    position: absolute;
+    top: 40rpx;
+    right: 40rpx;
+}
+.ef6{
+    background: none;
+}
+.ef6 .title{
+    color: #333;
+    font-size: 34rpx;
+}
+.btn-wrap{
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+.btn-wrap button{
+    width:100%;
+    height: 90rpx;
+    background-color: #ef6461;
+    border-radius: 0;
+    color: #fff;
+    font-size: 34rpx;
+    line-height: 90rpx;
+}

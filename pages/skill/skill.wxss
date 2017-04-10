@@ -1,0 +1,99 @@
+/* pages/skill/skill.wxss */
+.skill-wrap{
+    padding:15rpx 40rpx;
+    background-color: #fff;
+}
+.skill{
+    font-size: 30rpx;
+    color: #bbb;
+    margin-right: -26rpx;
+}
+.skill::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+.tag{
+    display: inline-block;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    font-size: 30rpx;
+    color: #999;
+    line-height: 56rpx;
+    border-radius: 28rpx;
+    text-align: center;
+    padding: 0 40rpx;
+    border: 1px solid #cdcdcd;
+    background-color: #f5f5fa;
+}
+.tag-select{
+    background-color: #fff;
+    border-color:#ef6461 ;
+    color:#ef6461 ;
+    position:relative;
+    float: left;
+    margin:15rpx 26rpx 15rpx 0;
+}
+.tags{
+    padding:36rpx 30rpx 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-flow: row wrap;
+}
+.tags .tag{
+    margin:0 13rpx 30rpx;
+}
+.longen {position:absolute;
+left:0;
+bottom:-83rpx;
+width:140rpx;
+height:60rpx;
+border:1px solid black;
+background:black;
+color:white;
+border-radius:20rpx;
+font-size:26rpx;
+z-index:999;
+}
+.longen span{position:absolute;
+left:52rpx;
+bottom:58rpx;
+border-width:18rpx;
+border-style:solid dashed dashed;
+border-color:transparent transparent black;
+font-size:0;
+line-height:0;
+}
+.markLabel{
+width:100%;
+height:100%;
+position:absolute;
+top:0;
+padding-top:114rpx;
+}
+.markLabel .content{
+    width:100%;
+    height:100%;
+    background:#ebebeb;
+}
+.markLabel .label{
+border-bottom:1px solid #ccc;
+padding-left:30rpx;
+height:80rpx;
+line-height:80rpx;
+}
+.inputTag{
+line-height:58rpx;
+box-sizing:border-box;
+-webkit-box-sizing:border-box;
+font-size:30rpx;
+color:#999;
+border-radius:28rpx;
+height:58rpx;
+width: 245rpx;
+padding-left:30rpx;
+border: 1px dashed #bbb;
+margin: 15rpx 0;
+float: left;
+}

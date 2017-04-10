@@ -1,0 +1,27 @@
+<!--pages/selfdescription/selfdescription.wxml-->
+<view class="job">
+    <view class="edit-list">
+
+        <view class="edit-item-bdr">
+            <view class="edit-item ">
+                <view class="edit-content">
+                    <view class="title">兴趣爱好</view>
+                    <navigator url="/pages/xingqu/xingqu?label={{label}}">{{label}}</navigator>
+                </view>
+            </view>
+            <view class="edit-item detail">
+                <view class="edit-content nobdr">
+                    <view class="title">自我评价</view>
+                </view>
+                <view class="edit-content nobdr textarea">
+                    <textarea bindinput="bindKeyInput" focus="{{ele=='evaluate'}}" value="{{evaluate}}" />
+                </view>
+            </view>
+        </view>
+
+    </view>
+    <view class="btn-wrap">
+        <button class="btn" bindtap="goBack">保存</button>
+    </view>
+
+</view>

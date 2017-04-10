@@ -1,0 +1,18 @@
+<!--pages/xingqu/xingqu.wxml-->
+<view class="skill-wrap">
+    <view class="skill">
+        <view wx:for="{{selectTags}}" wx:key="unique" hidden="{{!item||item=='添加标签'}}" class="tag tag-select">
+            {{item}}
+        </view>
+        <input class="inputTag" bindconfirm="addLabel" bindinput="bindKeyInput" value="{{inputValue}}" placeholder="{{placeholder}}" placeholder-class="placeholder" />
+    </view>
+</view>
+<view class="markLabel" hidden="{{!inputValue}}">
+       <scroll-view class="content" scroll-y> 
+        <view class="label" wx:for="{{suggestTags}}" wx:key="unique" bindtap="addSuggest" data-selectTags="{{item.name}}">{{item.name}}</view>
+    </scroll-view> 
+</view> 
+<view class="tags">   
+    <view class="tag {{item.flag===true?'tag-select':''}}" data-flag="{{item.flag}}" wx:for="{{tags}}" wx:key="unique"  bindtap="addSkill" data-selectTags="{{item.name}}">{{item.name}}
+    </view>    
+</view>

@@ -1,0 +1,44 @@
+
+<!--pages/education/education.wxml-->
+<view class="education">
+  <view class="edit-list">
+    <view class="edit-item-bdr" wx:for="{{educations}}" wx:key="{{index}}">
+      <view class="edit-item">
+        <view class="edit-content nobg">
+          <view class="title">学校</view>
+          <input type="text" value="{{item.school}}" bindchange='schoolChange' data-index='{{index}}' auto-focus="{{ele == 'school'}}" />
+        </view>
+      </view>
+      <view class="edit-item">
+        <view class="edit-content nobg">
+          <view class="title">专业</view>
+          <input type="text" value="{{item.specialty}}" auto-focus="{{ele == 'specialty'}}" bindchange='specialtyChange' data-index='{{index}}' />
+        </view>
+      </view>
+      <view class="edit-item">
+        <view class="edit-content nobg">
+          <view class="title">学历</view>
+          <!--<picker  range="{{eduArr}}" value ="{{eduindex}}" data-index="{{eduindex}}"></picker>-->
+          <picker bindchange="eduChange" value ="{{eduindex}}" range="{{eduArr}}"data-index="{{index}}">{{educations[index].education?educations[index].education:'本科'}}</picker>
+        </view>
+      </view>
+      <view class="edit-item">
+        <view class="edit-content nobdr">
+          <view class="title">时间</view>
+          <navigator url="/pages/timepicker/timepicker?type=study&index={{index}}&edu={{educations[index].education?educations[index].education:'本科'}}&time={{item.time}}">{{item.time}}</navigator>
+        </view>
+      </view>
+    </view>
+    <view class="edit-item-bdr add">
+      <view class="edit-item">
+        <view class="edit-content nobdr">
+          <view class="title">添加</view>
+          <view class="more" bindtap="addOne">更多教育经历</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="btn-wrap">
+    <button class="btn" bindtap="goNext" bindtap='addEducation'>保存</button>
+  </view>
+</view>

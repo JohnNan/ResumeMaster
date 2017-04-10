@@ -1,0 +1,17 @@
+<!--pages/mini/mini.wxml-->
+<view class="me">
+
+    <view class="card person" bindtap="goResumView">
+        <view class="card-left">
+            <view class="mugshot"><image src="/images/mugshot.png" mode="widthFix"></image></view>
+            <view class="name"><text>安吉丽</text><view class="icon icon-female"></view></view>
+        </view>
+        <view class="card-right">
+            <view class="view-p"><view class="view-span">学历</view>本科</view>
+            <view class="view-p"><view class="view-span">求职意向</view>美术设计师</view>
+            <view class="view-p"><view class="view-span">工作年限</view>不到一年</view>
+            <view class="view-p"><view class="view-span">专业技能</view>PS、AI</view>
+        </view>
+    </view>
+
+</view>

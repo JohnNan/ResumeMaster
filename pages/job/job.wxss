@@ -1,0 +1,26 @@
+/* pages/job/job.wxss */
+@import "/pages/information/information.wxss" ;
+
+.detail .edit-content textarea,
+.detail .edit-content .inner{
+    width: 100%;
+    height: 305rpx;
+    padding: 30rpx 20rpx;
+    font-size: 28rpx;
+    color: #999;
+    line-height: 36rpx;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.detail .edit-content .inner{
+    line-height: 1.6;
+    text-align: left;
+    padding: 0;
+}
+.job .more{
+    background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAbCAMAAABY1h8eAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAeFBMVEUAAADvZGHvZGHvZGHvZGHvZGHvZGHvZGHvZGHvZGHvZGHvZGHvZGHvZGHvZGHvZGHvZGHvZGHvZGHvZGHvZGHvZGHvZGHvZGHvZGHvZGHvZGHvZGHvZGHvZGHvZGHvZGHvZGHvZGHvZGHvZGHvZGHvZGHvZGEAAABkNmqUAAAAJnRSTlMADoOIhXw2c21qdbdicmYxX/3+9veHFUk+PE+cN0QRBHEYGhLXaZbD2aUAAAABYktHRACIBR1IAAAACXBIWXMAAAsSAAALEgHS3X78AAAAX0lEQVQoz2NgQAKMakwMOAGjGjM+SZZRSQY1VlQ+GzsHDHByqXHzwHm8fPwMAmpwICikJiSM4IqIMoiJS8CApJSatAycJ8smh2KFvJoCbvcoojtoJEoq4Uu3yiqqKHwAd6cNLgPgL1UAAAAASUVORK5CYII=) no-repeat 390rpx center;
+    background-size: 28rpx auto;
+    padding:0 ;
+    color:#ef6461 ;
+}
+.job .add .title{color:#ef6461;}

@@ -1,0 +1,87 @@
+/**app.wxss**/
+page{
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  height: 100%;
+  background-color: #ebebeb;
+  overflow-y: auto;
+  }
+view{
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+image{
+    width: 100%;
+    height: 100%;
+}
+/*star*/
+.star{
+  width:100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  box-shadow:0 6rpx 10rpx rgba(148,148,148,0.5);
+  margin: 0 0 40rpx 605rpx;
+  position: relative;
+  background: #ef6461 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACcAAAAnCAMAAAC7faEHAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAUVBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////8AAAAIicFMAAAAGXRSTlMAXEBBvr/g4UPG6/1aUlQ5s9b6Orm7OzxRKjTJ5AAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAABqSURBVDjL7dE3DoAwEETRMdlEY+Le/6LAVhiKdYGEEP7l6HUDXFNEpCAW0VEsuoRdKrqMXR7c31yhy3MVu8rZdAHU5JOCFyN63DVerAU605+zvFtnM8MHfgvuFTeym0Q3s1tEh3VnzW3dAA2hKD90pzUiAAAAAElFTkSuQmCC) no-repeat center center/38rpx auto;
+}
+::-webkit-scrollbar{
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+.btn{
+  width:700rpx;
+  height: 80rpx;
+  color:#f4f8fb;
+  font-size:36rpx;
+  line-height: 80rpx;
+  border-radius: 10rpx;
+  background-color: #ef6461;
+}
+.button-hover{
+  background-color:#df4542 ;
+}
+.button-disable{
+  background-color:#ef7d7b ;
+}
+button::after{display: none;}
+.icon-male{
+  background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAA9lBMVEUAAAA5tP85tP85tP85tP85tP85tP85tP85tP85tP85tP85tP85tP85tP85tP85tP85tP85tP85tP85tP85tP85tP85tP85tP85tP85tP85tP85tP85tP85tP85tP85tP85tP85tP85tP85tP85tP85tP85tP85tP85tP85tP85tP85tP85tP85tP85tP85tP85tP85tP85tP85tP85tP85tP85tP85tP85tP85tP85tP85tP85tP85tP85tP85tP85tP85tP85tP85tP85tP85tP85tP85tP85tP85tP85tP85tP85tP85tP85tP85tP85tP8AAADBdM9CAAAAUHRSTlMA8PVC+S3I8eMDpt/z11UGFdzeUTtE21nSiZhxKQfV+/ZnbGlURWvkW9Rcq3Cs4Cj48gzZpCunb9MseOZADccqakN/oUgBimgCkycFC5RT+ohSYeEAAAABYktHRACIBR1IAAAACXBIWXMAAAsSAAALEgHS3X78AAABE0lEQVQoz3VR6VrCMBAMECiltcEDFGkp1gJBKSiKxRNPxJN5/6expOnXFDV/djaTzMwmhKwviJUj/xD53wQp0Gj/jxvFHFDSyrLTKwY1NyoWI9VNYKuaN8T29k4tVkZ9txQZF4m2tzrdwD5p2o5jN1sr0i1ImQbaB4mi5wKHsvFBa6l1x4UfI1aGp4bqoscE4OjrKqH3cSTAMQbZOQYIRB3CzhIjDEU9gZMlGKiop2BZYiyJM4wU53NOJlJKNR9fQGOhNOeYyriXV9cwb/SpjBsN2BXg1gTuZuQePZnGAn0Q4PHp+YV0KKxEeY726yKGC49inkZ5A1rh+8fnJIye/Ut9oO86ko/y16blgbFcGgFPh/0BRMQs/lqcIU0AAAAASUVORK5CYII=) no-repeat;
+  background-size:24rpx auto ;
+}
+.icon-female{
+  background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAZCAMAAAAc9R5vAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABfVBMVEUAAADqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGTqZGQAAACkan6LAAAAfXRSTlMAFXHV8u1WY+j57nCDvj2JmGAeDThFHPtTeMUvS+lDMbQY4Qe4DEB0JWau33XkCrEJ7LepA+K8qASmv4YW9Fj2J2RR/hfNx8YyIDr9yXNI5WWeOY1fV6c+K3uV2Fnai+uqim2XrFpUliKBwdS7YhRq+OA0boRsM1XzI/c3T/XR1esAAAABYktHRACIBR1IAAAACXBIWXMAAAsSAAALEgHS3X78AAABMElEQVQoz12RZUMCURRErw12oaCiiN2KiqJidyd2KyYGdpz/7rIPlOd8ubNz9u3O3hWJKSExKRlISRVdaRYjtaZDRmZWdlyeY8S5efkFhbYiKLb/5g4oKY36MieUR30FuP5OV7qxVClbjbMm7rm1UGeaemjQmjTSZM5mWlo1UA7mdNGmd2/vUMBDpw66uhXw0qOD3ijw0ReX9ifKgF+BQYaGf/MR48WjjJl+HGLrsU2ARyaZEpmeEZmd80aBD+ZlARbFxtK0yDIrq2o5a+uyAQGRTfBvid0K2wnqG3ZgN7KgPdg/IKLDo+OT0zPDeNQt55FftBtU0JDFESt4YVwFRS6vXNc3t67QXSy/fzDAY1j+6wncz+D8T16MVq/yBu8fOoDPsOr2pYNA0qs5v0N6/gOM8VXf1pAuBAAAAABJRU5ErkJggg==) no-repeat;
+   background-size:24rpx auto ;
+}
+
+.navigator-hover{background-color: transparent;}
+.tabbar{
+    display: flex;
+    height: 90rpx;
+    display:-webkit-flex;
+    background-color: #fcfcfc;
+    padding: 0 80rpx;
+    justify-content: space-between;
+    box-shadow:0 2rpx 24rpx rgba(187,187,187,0.5);
+    position: relative;
+}
+.nav{
+    display: inline-block;
+    width: 200rpx;
+    text-align: center;
+    font-size: 28rpx;
+    line-height: 90rpx;
+    color:#919191 ;
+    position: relative;
+}
+.current{font-size: 30rpx;color:#ef6461 ;}
+.current:after{
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 200rpx;
+    height: 6rpx;
+    background-color: #ef6461;
+}

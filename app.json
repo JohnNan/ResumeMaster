@@ -1,0 +1,25 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/xingqu/xingqu",
+    "pages/intension/intension",
+    "pages/skill/skill",
+    "pages/education/education",
+    "pages/job/job",
+    "pages/imgpreview/imgpreview",
+    "pages/information/information",
+    "pages/me/me",
+    "pages/selfdescription/selfdescription",
+    "pages/city/city",
+    "pages/mini/mini",
+    "pages/timepicker/timepicker",
+    "pages/resumeview/resumeview",
+    "pages/send/send"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ef6461",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "light"
+  }
+}

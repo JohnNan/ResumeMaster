@@ -1,0 +1,4 @@
+/* pages/timepicker/timepicker.wxss */
+@import "/pages/information/information.wxss";
+
+.m40{margin-top: 40rpx;}

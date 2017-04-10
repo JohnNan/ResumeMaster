@@ -1,0 +1,6 @@
+<!--pages/send/send.wxml-->
+<view class="send-wrap">
+    <view class="send-bg"></view>
+    <input type="text" bindinput="emailChange" placeholder="请输入邮箱地址" placeholder-style="text-align:center; font-size:34rpx; color:#999;"  value="{{resume.userInfo.email}}" />
+    <button class="btn" bindtap="doPost">投递</button>
+</view>

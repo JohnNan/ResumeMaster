@@ -1,0 +1,85 @@
+<!--pages/information/information.wxml-->
+<view class="information">
+    <view class="edit-list">
+
+        <view class="edit-item-bdr">
+            <view class="edit-item">
+                <view class="edit-content nobg">
+                    <view class="title">姓名<text>（必填）</text></view>
+                    <input type="text" bindinput="bindNameInput" bindblur="checkName" value="{{userInfo.name}}" focus="{{ele=='name'}}"/>
+                </view>
+            </view>
+            <view class="edit-item">
+                <view class="edit-content nobdr nobg">
+                    <view class="title">手机号<text>（必填）</text></view>
+                    <input type="{{system}}" maxlength='11' bindinput="bindTelInput" bindblur="checkPhone" focus="{{ele=='phoneNumber'}}" value="{{userInfo.phoneNumber}}"/>
+                </view>
+            </view>
+        </view>
+
+        <view class="edit-item-bdr">
+            <view class="edit-item">
+                <view class="edit-content">
+                    <view class="title">生日</view>
+                    <picker mode="date" start="1900-01-01" end="{{endTime}}" bindchange="bindDateChange">{{userInfo.birthday||deBirsthday}}</picker>
+                </view>
+            </view>
+            <view class="edit-item ">
+                <view class="edit-content">
+                    <view class="title">性别</view>
+                    <picker bindchange="genderChange" range="{{array}}">{{userInfo.gender||'男'}}</picker>
+                </view>
+            </view>
+            <view class="edit-item ">
+                <view class="edit-content">
+                    <view class="title">专业技能</view>
+                    <navigator url="/pages/skill/skill?selectTags={{userInfo.skill||''}}">{{userInfo.skill||''}}</navigator>
+                </view>
+            </view>
+            <view class="edit-item ">
+                <view class="edit-content nobdr">
+                    <view class="title">求职意向</view>
+                    <navigator url="/pages/intension/intension?selectTags={{userInfo.position||''}}">{{userInfo.position||''}}</navigator>
+                </view>
+            </view>
+        </view>
+
+        <view class="edit-item-bdr">
+            <view class="edit-item">
+                <view class="edit-content nobg">
+                    <view class="title">邮箱</view>
+                    <input type="text" bindinput="bindEmailInput" bindblur="checkEmail" focus="{{ele=='email'}}" value="{{userInfo.email||''}}"/>
+                </view>
+            </view>
+            <view class="edit-item ">
+                <view class="edit-content nobdr">
+                    <view class="title">所在地</view>
+                    <navigator url="/pages/city/city?address={{userInfo.address||''}}">{{userInfo.address||''}}</navigator>
+                </view>
+            </view>
+        </view>
+
+        <view class="edit-item-bdr">
+            <view class="edit-item">
+                <view class="edit-content nobdr">
+                    <view class="title">自我描述</view>
+                    <navigator url="/pages/selfdescription/selfdescription?hobby={{userInfo.hobby||''}}&evaluate={{userInfo.evaluate||''}}"></navigator> 
+                </view>
+            </view>
+        </view>
+
+    </view>
+
+    <view class="btn-wrap">
+        <button class="btn" bindtap="goNext">保存</button>
+    </view>
+    <modal hidden="{{modal}}" title="输入手机号验证码" no-cancel="false" confirm-text="">
+    <view class="passContainer" bindtap="showKeyboard">
+        <input class="sms" hidden="{{input}}" bindfocus="hideInput" bindinput="bindSmsInput" type="number" focus="{{focus}}" value="{{sms1+sms2+sms3+sms4}}" />
+        <view class="passItem">{{sms1}}</view>
+        <view class="passItem">{{sms2}}</view>
+        <view class="passItem">{{sms3}}</view>
+        <view class="passItem">{{sms4}}</view>
+    </view>
+    </modal>
+</view>

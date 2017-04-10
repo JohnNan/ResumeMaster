@@ -1,0 +1,33 @@
+<!--index.wxml-->
+<view class="container">
+    <view class="tabbar" style="display:{{showNav}}">
+        <view class="nav current">简历库</view>
+        <view class="nav" catchtap="goMe">我的</view>
+    </view>
+    <image class="template" bindtap="switchNavi" src="{{domain+photo}}" mode="widthFix"></image>
+    <view class="scroll-wrap" animation="{{animation}}">
+        <view class="content">
+            <view class="template-item" wx:for="{{modelList}}" wx:key="unique" data-resume="{{index}}" data-id="{{item.id}}" data-photo="{{item.photo}}" bindtap="switchResume">
+                <!--<image class="" src="{{domain+item.photo}}" mode="widFix"></image>-->
+                <view class="template {{index===flag?'template-select':''}}">
+                    <image src="{{domain+item.photo}}" mode="widFix"></image>
+                </view>
+                <view class="txt-item {{index===flag?'txt-select':''}}">{{item.name}}</view>
+            </view>
+        </view>
+    </view>
+</view>
+
+<!-mask-->
+<!--<view class="whitemask {{maskFlag===false?'hide':''}}"></view>-->
+<view class="circle" animation="{{animation1}}" bindtap="goUse">
+    <view class="close">
+        <!--<view class="shape1 {{animFlag!=='move'?maskFlag?'tap':'':''}} {{animFlag==='move'?maskFlag?'tap':'tap-back':''}}"></view>
+        <view class="shape2 {{animFlag!=='move'?maskFlag?'tap':'':''}} {{animFlag==='move'?maskFlag?'tap':'tap-back':''}}"></view>-->
+        <!--<view class="tool {{maskFlag===false?'hide':''}}">
+            <button class="tool-btn fav" catchtap="goFavo">{{favText}}</button>
+            <button class="tool-btn use" catchtap="goUse">使用</button> 
+        </view>-->
+
+    </view>
+</view>

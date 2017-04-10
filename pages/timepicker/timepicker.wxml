@@ -1,0 +1,15 @@
+<!--pages/timepicker/timepicker.wxml-->
+<view class="edit-item-bdr m40">
+    <view class="edit-item">
+        <view class="edit-content">
+            <view class="title">{{startTxt}}</view>
+            <picker mode="date" value="{{2000}}" end="{{today}}"  fields="{{type=='study'?'year':''}}" bindchange="startDateChange">{{start}}</picker>
+        </view>
+    </view>
+    <view class="edit-item">
+        <view class="edit-content nobdr">
+            <view class="title">{{endTxt}}</view>
+            <picker mode="date" value="{{end?end:'2000'}}" start="{{end?'':'1970'}}" end="{{today}}" fields="{{type=='study'?'year':''}}"  bindchange="endDateChange">{{end}}</picker>
+        </view>
+    </view>
+</view>

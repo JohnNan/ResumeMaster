@@ -1,0 +1,2 @@
+/* pages/mini/mini.wxss */
+@import "/pages/me/me.wxss";

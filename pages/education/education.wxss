@@ -1,0 +1,28 @@
+/* pages/education/education.wxss */
+@import "/pages/information/information.wxss" ;
+.education .more{
+    background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAbCAMAAABY1h8eAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAeFBMVEUAAADvZGHvZGHvZGHvZGHvZGHvZGHvZGHvZGHvZGHvZGHvZGHvZGHvZGHvZGHvZGHvZGHvZGHvZGHvZGHvZGHvZGHvZGHvZGHvZGHvZGHvZGHvZGHvZGHvZGHvZGHvZGHvZGHvZGHvZGHvZGHvZGHvZGHvZGEAAABkNmqUAAAAJnRSTlMADoOIhXw2c21qdbdicmYxX/3+9veHFUk+PE+cN0QRBHEYGhLXaZbD2aUAAAABYktHRACIBR1IAAAACXBIWXMAAAsSAAALEgHS3X78AAAAX0lEQVQoz2NgQAKMakwMOAGjGjM+SZZRSQY1VlQ+GzsHDHByqXHzwHm8fPwMAmpwICikJiSM4IqIMoiJS8CApJSatAycJ8smh2KFvJoCbvcoojtoJEoq4Uu3yiqqKHwAd6cNLgPgL1UAAAAASUVORK5CYII=) no-repeat 390rpx center;
+    background-size: 28rpx auto;
+    padding:0 ;
+    color:#ef6461 ;
+}
+.education .add .title{color:#ef6461;}
+.tag-wrap{line-height: 56rpx;}
+.tag-wrap .edit-content{
+    padding-top:20rpx;
+   padding-bottom:20rpx;
+}
+.education .tags{
+    background: none;
+    padding-right: 0;
+}
+.tag{
+    display: inline-block;
+    height: 56rpx; 
+    padding: 0 15rpx;
+    text-align: center;
+    border: 1px solid #38c2df;
+    border-radius: 10rpx;
+    margin-left: 24rpx;
+}
+

@@ -1,0 +1,8 @@
+/* pages/selfdescription/selfdescription.wxss */
+@import "/pages/information/information.wxss" ;
+.textarea{
+    padding-bottom:35rpx;
+}
+textarea{
+    padding:20rpx 0;
+}

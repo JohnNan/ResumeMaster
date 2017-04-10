@@ -1,0 +1,2 @@
+/* pages/intension/intension.wxss */
+@import "/pages/skill/skill.wxss";

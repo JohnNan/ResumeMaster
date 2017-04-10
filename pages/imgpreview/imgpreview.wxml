@@ -1,0 +1,14 @@
+<!--pages/imgpreview/imgpreview.wxml-->
+<view class="container">
+    <image class="template" bindtap="switchNavi" src="{{source}}" mode="widthFix"></image>
+    <view class="scroll-wrap" animation="{{animation}}">
+        <view class="content">
+            <view class="template-item" wx:for="{{modelList}}" wx:key="{{index}}" data-resume="{{index}}" data-id="{{item.id}}" data-photo="{{item.photo}}" bindtap="switchResume">
+                <image class="template {{index===flag?'template-select':''}}" src="https://resume.dreawer.com{{item.photo}}" mode="widFix"></image>
+                <view class="txt-item {{index===flag?'txt-select':''}}">{{item.name}}</view>
+            </view>
+        </view>
+    </view>
+</view>
+
+<view class="zoom" catchtap="bigImg"></view>
